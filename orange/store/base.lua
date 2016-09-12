@@ -7,14 +7,13 @@ end
 
 function Store:set(k, v)
     if not k or k == "" then return false, "nil key." end
-    ngx.log(ngx.DEBUG, " store \"" .. self._name .. "\" get:" .. k)
+    ngx.log(ngx.DEBUG, " store \"" .. self._name .. "\" set:" .. k, " v:", v)
 end
 
 
 function Store:get(k)
     if not k or k == "" then return nil end
-
-    ngx.log(ngx.DEBUG, " store \"" .. self._name .. "\" set:" .. k, " v:", v)
+    ngx.log(ngx.DEBUG, " store \"" .. self._name .. "\" get:" .. k)
 end
 
 
